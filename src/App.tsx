@@ -63,7 +63,6 @@ function App() {
 
   const swiped = (
     direction: Direction,
-    nameToDelete: string,
     index: number
   ) => {
     setLastDirection(direction);
@@ -91,7 +90,7 @@ function App() {
               ref={childRefs[index]}
               className="origin-center w-full h-full absolute"
               key={animal.id}
-              onSwipe={(dir) => swiped(dir as Direction, animal.name, index)}
+              onSwipe={(dir) => swiped(dir as Direction,  index)}
             >
               <div
                 style={{ backgroundImage: `url(${animal.img})` }}
